@@ -17,18 +17,19 @@ namespace PalindromePrimePI
         static int digitsFound = 9;
         static void Main(string[] args)
         {
-            Thread t = new Thread(NovaThread);
-            Thread.Sleep(1000);
-            t.Start();
-            Thread b = new Thread(NovaThread);
-            Thread.Sleep(1000);
-            b.Start();
-            Thread c = new Thread(NovaThread);
-            Thread.Sleep(1000);
-            c.Start();
-            Thread d = new Thread(NovaThread);
-            Thread.Sleep(1000);
-            d.Start();
+            NovaThread();
+            //Thread t = new Thread(NovaThread);
+            //Thread.Sleep(1000);
+            //t.Start();
+            //Thread b = new Thread(NovaThread);
+            //Thread.Sleep(1000);
+            //b.Start();
+            //Thread c = new Thread(NovaThread);
+            //Thread.Sleep(1000);
+            //c.Start();
+            //Thread d = new Thread(NovaThread);
+            //Thread.Sleep(1000);
+            //d.Start();
         }
         static void NovaThread()
         {
