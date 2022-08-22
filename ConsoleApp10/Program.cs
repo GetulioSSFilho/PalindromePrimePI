@@ -66,7 +66,7 @@ namespace PalindromePrimePI
                     if (palindromic && IsPrime(int.Parse(nCheck)))
                     {
                         MessageBox.Show($"The number {nCheck} is palíndrome and Prime.");
-                        Console.ReadKey();
+                        //Console.ReadKey();
                         return;
                     }
                 }
