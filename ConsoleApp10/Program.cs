@@ -5,6 +5,7 @@ using System.Net;
 using static System.Math;
 using Newtonsoft.Json.Linq;
 using System.Windows;
+using System.Threading;
 
 namespace PalindromePrimePI
 {
@@ -16,7 +17,18 @@ namespace PalindromePrimePI
         static int digitsFound = 9;
         static void Main(string[] args)
         {
-            NovaThread();
+            Thread t = new Thread(NovaThread);
+            Thread.Sleep(1000);
+            t.Start();
+            Thread b = new Thread(NovaThread);
+            Thread.Sleep(1000);
+            b.Start();
+            Thread c = new Thread(NovaThread);
+            Thread.Sleep(1000);
+            c.Start();
+            Thread d = new Thread(NovaThread);
+            Thread.Sleep(1000);
+            d.Start();
         }
         static void NovaThread()
         {
@@ -52,7 +64,7 @@ namespace PalindromePrimePI
                     palindromic = vetor1[0] == vetor2[0];
                     if (palindromic && IsPrime(int.Parse(nCheck)))
                     {
-                        MessageBox.Show("The number {0} is palíndrome and Prime.", nCheck);
+                        MessageBox.Show($"The number {nCheck} is palíndrome and Prime.");
                         Console.ReadKey();
                         return;
                     }
